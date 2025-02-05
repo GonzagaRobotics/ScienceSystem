@@ -25,6 +25,8 @@ colcon build --symlink-install
 source install/local_setup.bash
 ```
 
+Before running, make sure you call `sudo pigpiod` to start the pigpio daemon. This only needs to be done once per boot.
+
 To run just the systems, run the following command:
 
 ```bash
