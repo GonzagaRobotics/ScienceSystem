@@ -9,10 +9,10 @@ FORWARD = 1
 BACKWARD = 0
 
 # Output pins
-AUGER_DRILL_EN = 0
+AUGER_DRILL_EN = 2
 # The L298N uses two pins to control the direction of the motor
-AUGER_DRILL_DIR1 = 0
-AUGER_DRILL_DIR2 = 0
+AUGER_DRILL_DIR1 = 3
+AUGER_DRILL_DIR2 = 4
 AUGER_VERTICAL_STEP = 0
 AUGER_VERTICAL_DIR = 0
 
@@ -144,12 +144,12 @@ class Science(Node):
     def auger_vertical_callback(self, msg: Float32):
         self.get_logger().info('Auger vertical: %s' % msg.data)
 
-        set_auger_vertical(msg.data)
+        # set_auger_vertical(msg.data)
 
     def auger_drill_callback(self, msg: Float32):
         self.get_logger().info('Auger drill: %s' % msg.data)
 
-        set_auger_drill(msg.data)
+        # set_auger_drill(msg.data)
 
     def auger_actuate_callback(self, msg: Float32):
         self.get_logger().info('Auger actuate: %s' % msg.data)
